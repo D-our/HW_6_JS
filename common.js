@@ -20,26 +20,27 @@
 
     const arrOfAllGrades =   arrOfAllMarks();
 
+    console.log(averageStudentMark(students[0]));
+    console.log(averageGroupMark(arrOfAllGrades));
+
     function averageStudentMark (student) {
         return student.marks.reduce((mark, val) => mark + val, 0);
-    }
 
-    console.log(averageStudentMark(students[0]));
+    }
 
     function arrOfAllMarks () {
         return students.flatMap((item) => item.marks);
 
     }
 
-
     function averageGroupMark (arrOfAllGrades) {
-
         let result =  arrOfAllGrades.reduce((a, b) => a + b);
 
         return result / arrOfAllGrades.length;
+
     }
 
-   console.log(averageGroupMark(arrOfAllGrades));
+
 
 
 
